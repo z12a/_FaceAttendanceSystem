@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>刷脸考勤签到系统 - 学生人脸</title>
+    <link rel="icon" href="../../static/picture/logo.png">
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="../../static/css/style1.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../../static/js/echarts.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">刷脸考勤签到系统（学生人脸图片）</a>
+        </div>
+        <div>
+        </div>
+        <div class="logout">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ url_for('student.home') }}">返回首页</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="text-center"><br><br>
+<h3>我的人脸</h3>
+   <br><br>
+
+    {% for path in face_paths %}
+        <img style="width: 200px;height: 200px" src="{{ path }}">
+    {% endfor %}
+</div>
+<!-- footer -->
+<div id="footerID" class="footer">
+    <div class="copyright" style="text-align: center;font-weight: bolder;color: #707070">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>
+            <span>Copyright(C). Create By BHML 2024, All Rights Reserved.</span>&nbsp;&nbsp;
+        </p>
+    </div>
+</div>
+</body>
+</html>
